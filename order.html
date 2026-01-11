@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Konfigurasi Pesanan — Array</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="nav container">
+      <a href="index.html" class="brand">|ARRAY</a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html#keunggulan">Keunggulan</a>
+        <a href="index.html#jenis">Jenis</a>
+        <a href="index.html#kontak">Kontak</a>
+        <a href="order.html" class="btn btn-primary btn-sm cta-nav">Pesan Sekarang</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="section-spacing container">
+    <div class="section-header text-left">
+      <h1>Konfigurasi Pesanan</h1>
+      <p class="subtitle">Sesuaikan ukuran dan material untuk mendapatkan estimasi harga instan.</p>
+    </div>
+
+    <div class="order-layout">
+      <aside class="preview-card">
+        <div class="img-wrapper">
+          <img id="preview-img" src="https://i.ibb.co.com/dwdY5PzL/Whats-App-Image-2025-12-20-at-12-46-56.jpg" alt="Preview Produk">
+          <div class="badge">Preview</div>
+        </div>
+        <div class="spec-details">
+          <h3 id="product-name">Pilih Jenis Tirai</h3>
+          <div class="spec-row">
+            <span>Material</span>
+            <span id="spec-material">-</span>
+          </div>
+          <div class="spec-row">
+            <span>Harga Dasar</span>
+            <span id="spec-price">-</span>
+          </div>
+          <div class="spec-row">
+            <span>Garansi</span>
+            <span>2 Tahun (Mekanik)</span>
+          </div>
+        </div>
+      </aside>
+
+      <section class="calculator-form">
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="productSelect">Tipe Produk</label>
+            <select id="productSelect" required>
+              <option value="">-- Pilih Varian --</option>
+              <option value="bambu">Tirai Bambu Autentik</option>
+              <option value="pvc">Tirai PVC Premium</option>
+              <option value="edging">Tirai Modern Edging</option>
+            </select>
+          </div>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="widthInput">Lebar (Meter)</label>
+              <input type="number" id="widthInput" step="0.01" min="0" max="3" placeholder="Maks 3.0" required>
+              <small class="warning-text" id="widthWarning">Maksimal lebar 3 meter per unit.</small>
+            </div>
+            <div class="form-group">
+              <label for="heightInput">Tinggi (Meter)</label>
+              <input type="number" id="heightInput" step="0.01" min="0" placeholder="Contoh: 2.5" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="colorInput">Catatan Warna/Motif</label>
+            <input type="text" id="colorInput" placeholder="Contoh: Coklat Tua / Hitam Glossy">
+          </div>
+
+          <div class="total-box">
+            <span>Estimasi Total</span>
+            <strong id="totalPrice">Rp 0</strong>
+          </div>
+
+          <div class="action-buttons">
+            <button type="button" id="btnWhatsapp" class="btn-wa">Pesan via WhatsApp</button>
+            <button type="button" id="btnShopee" class="btn-shopee">Checkout Shopee</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 |Array Interior. Sistem Kalkulasi Presisi.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="order.js"></script>
+</body>
+</html>
